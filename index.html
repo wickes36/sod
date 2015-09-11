@@ -13,6 +13,15 @@
     Learn more about Flex at http://flex.org 
     // -->
 <head>
+
+<script src="https://app.netlify.com/authentication.js"></script>
+<script>
+netlify.authenticate({provider:"github"}, function(err, data) {
+    if (err) { return console.log("Error authenticating: %s", err.message); }
+    console.log("Authenticated with Github: %o", data);
+})
+</script>
+
 <meta http-equiv="Content-Type" content=
 "text/html; charset=utf-8" />
 <title>Learning With Sodexo</title>
